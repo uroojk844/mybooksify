@@ -1,0 +1,151 @@
+:root{
+    --text: rgb(33, 33, 33);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 24px;
+    height: 100%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row img{
+    max-width: 500px;
+    width: 100%;
+}
+
+.row .col{
+    display: grid;
+    width: 100%;
+    place-items: center;
+    padding: 16px;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    place-items: center;
+    display: grid;
+    gap: 24px;
+}
+
+.big{
+    font-size: 36px;
+    margin-bottom: 48px;
+    font-weight: bold;
+    color: rgb(225, 123, 0);
+}
+
+.heading i {
+    font-size: 28px;
+    margin-right: 6px;
+}
+
+.heading {
+    color: var(--text);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.container .input-group{
+    width: 100%;
+}
+
+.container .input-group div {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--text);
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.container .input-group input {
+    width: 100%;
+    padding: 8px 4px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border-bottom: 1px solid #888;
+    color: var(--text);
+}
+
+.container input[type="submit"] {
+    width: 100%;
+    padding: 12px 0px;
+    border: 0;
+    background-color: rgb(225, 123, 0);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #ff4500;
+}
+
+.container a{
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.msg{
+    color: tomato;
+}
+
+@media screen and (max-width:600px) {
+    .big{
+        margin-bottom: 16px;
+        font-size: 26px;
+    }
+
+    .container{
+        padding: 16px;
+    }
+
+    .container .input-group input{
+        width: 100%;
+    }
+    .container input[type="submit"] {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .row{
+        grid-template-columns: auto;
+        place-items: center;
+    }
+
+    .row .col{
+        width: 100%;
+    }
+}
