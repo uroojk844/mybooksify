@@ -1,0 +1,153 @@
+:root{
+    --text: #444;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+body > .main{
+    flex-grow: 1;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+.logo{
+    width: 70px;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    place-items: center;
+    max-width: 1100px;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+nav .center{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 16px;
+    letter-spacing: 1px;
+}
+
+nav .center .items{
+    cursor: pointer;
+    transition: color .25s ease-in-out;
+    text-align: center;
+}
+
+nav .center .items:hover{
+    color: orangered;
+}
+
+nav .active{
+    color: orangered;
+}
+
+nav .right{
+    font-size: 24px;
+}
+
+footer{
+    background-color: #374252;
+    padding: 48px 64px;
+}
+
+footer .container{
+    color: #959ba7;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: auto max-content;
+    gap: 48px;
+    justify-content: space-between;
+    margin: 0 auto;
+    place-items: center;
+}
+
+footer .first{
+    display: grid;
+    grid-template-columns: 240px auto;
+    gap: 48px;
+    place-items: center;
+}
+
+footer .first img{
+    max-width: 125px;
+}
+
+footer h3{
+    color: #fff;
+}
+
+footer .first summary{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer .second{
+    display: grid;
+    gap: 16px;
+    place-content: baseline;
+    place-items: center;
+}
+
+footer .container a{
+    color: #959ba7;
+}
+
+@media screen and (max-width:600px) {
+    .logo{
+        width: 32px;
+    }
+    nav .container{
+        height: auto;
+    }
+    .container .center{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 16px 0;
+        box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    footer{
+        margin-bottom: 42px;
+    }
+
+    footer .container{
+        grid-template-columns: auto;
+        gap: 24px;
+    }
+
+    footer .first{
+        grid-template-columns: auto;
+    }
+}
